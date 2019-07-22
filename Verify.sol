@@ -41,8 +41,12 @@ contract Verify {
 		return Q_x == r;
 	}
 
-	function isValidSignatureForMessage() public pure {
+	function isValidSignatureForMessage(uint256 PK_x, uint256 PK_y, uint256 r, uint256 s, string memory message) public returns (bool valid) {
+		bytes memory preimage = bytes(message);
+		bytes32 hash = sha256(preimage);
+		uint256 hashIntRepr = uint256(hash);
 
+		return isValidSignatureForHash(PK_x, PK_y, r, s, hashIntRepr);
 	}
 
 	function getDebugQ_x() public view returns (uint256) {
