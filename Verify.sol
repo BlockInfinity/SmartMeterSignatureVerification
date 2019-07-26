@@ -1,5 +1,11 @@
 pragma solidity ^0.5.0;
 
+/*
+License: GPL-3.0
+Author: Christoph Michelbach
+Contact: christoph.michelbach@blockinfinity.com
+*/
+
 import "./EccOperations/EccOperations.sol";
 
 contract Verify {
