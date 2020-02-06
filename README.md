@@ -8,7 +8,7 @@ On-chain verification of signatures created by smart meters is difficult. German
 
 Conducting computations on any of these curves on-chain is expensive in terms of gas costs as none of them is supported by Ethereum. Ethereum only supports the curve ALT_BN_128 via precompiled contracts, offering vastly reduced gas costs for ECC computations on this curve when compared to conducting the same computations on the same curve but via an implementation in a regular smart contract. Adding two points only costs 500 gas; preforming a scalar multiplication only costs 40 000 gas.
 
-Luckily, the curve chosen for signing content is BrainpoolP256r1. This is the cheapest one of the ones that are required to be supported by smart meters as it is the one with the smallest primes.
+Luckily, the curve chosen for signing of content is BrainpoolP256r1. This is the cheapest one of the ones that are required to be supported by smart meters as it is the one with the smallest primes.
 
 Our ECC Operations library provides the following operations at the respective approximate costs:
 
